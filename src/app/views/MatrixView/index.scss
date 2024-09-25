@@ -1,0 +1,94 @@
+.matrix-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+
+    &__go-home {
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        background: white;
+    }
+
+    &__content {
+        width: fit-content;
+        min-width: 500px;
+        min-height: 300px;
+        padding: 30px 50px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        background: rgb(228, 228, 228);
+    }
+
+    &__table {
+        margin-bottom: 30px;
+
+        th,
+        td {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            font-size: 12px;
+
+            button {
+                font-size: 12px;
+            }
+        }
+
+        th {
+            padding: 10px 0;
+            background: #afafd8;
+
+            &:first-child {
+                border-radius: 10px 0 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0 10px 0 0;
+            }
+        }
+
+        td {
+            border: 1px solid rgb(163, 163, 163);
+            cursor: pointer;
+
+            &.hovered {
+                background: #cbcbff
+            }
+
+            &.matrix-view__table__matrix-cell {
+                padding: 10px 0;
+
+                &:hover {
+                    background: rgb(226, 176, 255);
+                }
+            }
+
+            &.matrix-view__table__percentage-cell {
+                padding: 10px 0;
+            }
+
+            &.matrix-view__table__delete-button {
+                border: none;
+
+                button {
+                    height: 100%;
+                }
+            }
+        }
+
+        .sum-button {
+            cursor: pointer;
+        }
+    }
+
+    &__no-items {
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+    }
+}
