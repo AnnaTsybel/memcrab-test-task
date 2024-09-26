@@ -1,7 +1,7 @@
 import zlib from "zlib";
 import path from "path";
 
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import viteCompression from "vite-plugin-compression";
 
@@ -21,14 +21,10 @@ const PRODUCTION_PLUGINS = [
 
 export default ({ mode }: any) => {
   const isProduction = mode === "production";
-  const env = loadEnv(mode, process.cwd(), "");
 
   return defineConfig({
     plugins: isProduction ? PRODUCTION_PLUGINS : [react()],
     base: isProduction ? "/memcrab-test-task/" : "/",
-    define: {
-      "process.env": JSON.stringify(env),
-    },
     root: path.join(__dirname, "/"),
     resolve: {
       alias: {

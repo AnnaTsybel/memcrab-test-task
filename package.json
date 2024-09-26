@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://annatsybel.github.io/memcrab-test-task",
   "scripts": {
     "deploy": "NODE_ENV=production vite build --mode production && gh-pages -d dist",
     "dev": "NODE_ENV=development tsc && vite --mode development",
