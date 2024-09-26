@@ -24,14 +24,14 @@ const Enter = () => {
     };
 
     const applyData = () => {
-        if (rowsAmount <= 0 || rowsAmount > 100  ) {
-            NotificationsPlugin.notify("Enter rows amount more than 0 and less than 100.");
+        if (rowsAmount <= 0 || rowsAmount > 100) {
+            NotificationsPlugin.notify("Enter a number of rows greater than 0 and less than 100.");
 
             return;
         }
 
-        if (columnsAmount <= 0 || columnsAmount > 100  ) {
-            NotificationsPlugin.notify("Enter columns amount more than 0 and less than 100.");
+        if (columnsAmount <= 0 || columnsAmount > 100) {
+            NotificationsPlugin.notify("Enter a number of columns greater than 0 and less than 100.");
 
             return;
         }
@@ -40,7 +40,7 @@ const Enter = () => {
         setLocalStorageItem(LocalStorageKeys.COLUMNS_AMOUNT, JSON.stringify(columnsAmount));
         
         navigate("/enter-limit");
-    }
+    };
 
     return (
         <div className="enter">

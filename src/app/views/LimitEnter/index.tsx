@@ -19,18 +19,18 @@ const LimitEnter = () => {
     };
 
     const applyData = () => {
-        const rowsAmountFromStorage = JSON.parse(getLocalStorageItem(LocalStorageKeys.ROWS_AMOUNT)|| '');
+        const rowsAmountFromStorage = JSON.parse(getLocalStorageItem(LocalStorageKeys.ROWS_AMOUNT) || '');
         const columnsAmountFromStorage = JSON.parse(getLocalStorageItem(LocalStorageKeys.COLUMNS_AMOUNT) || '');
         const maxAmount = Math.max(rowsAmountFromStorage, columnsAmountFromStorage);
         
         if (nearestLimit <= 0) {
-            NotificationsPlugin.notify('Nearest limit must be more than 0.');
+            NotificationsPlugin.notify('The nearest limit must be greater than 0.');
 
             return;
         }
 
-        if (nearestLimit > maxAmount ) {
-            NotificationsPlugin.notify(`Nearest limit must be less than maximum from columns or rows amount (${maxAmount}).`);
+        if (nearestLimit > maxAmount) {
+            NotificationsPlugin.notify(`The nearest limit must be less than the maximum number of columns or rows (${maxAmount}).`);
 
             return;
         }
@@ -38,7 +38,7 @@ const LimitEnter = () => {
         setLocalStorageItem(LocalStorageKeys.NEAREST_LIMIT, JSON.stringify(nearestLimit));
         
         navigate("/matrix");
-    }
+    };
 
     return (
         <div className="limits-enter">
