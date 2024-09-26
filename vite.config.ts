@@ -1,4 +1,6 @@
 import zlib from "zlib";
+import path from "path";
+
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import viteCompression from "vite-plugin-compression";
@@ -26,6 +28,18 @@ export default ({ mode }: any) => {
     base: isProduction ? "/memcrab-test-task/" : "/",
     define: {
       "process.env": JSON.stringify(env),
+    },
+    root: path.join(__dirname, "/"),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src/"),
+        "@app": path.resolve(__dirname, "./src/app/"),
+        "@components": path.resolve(__dirname, "./src/app/components/"),
+        "@views": path.resolve(__dirname, "./src/app/views/"),
+        "@utils": path.resolve(__dirname, "./src/app/utils/"),
+        "@static": path.resolve(__dirname, "./src/app/static/"),
+        jsbi: path.resolve(__dirname, "./node_modules/jsbi/dist/jsbi-cjs.js"),
+      },
     },
     server: {
       host: true,

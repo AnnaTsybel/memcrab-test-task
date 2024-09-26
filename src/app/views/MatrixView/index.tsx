@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Button } from "../../components/common/Button";
+import { Button } from "@components/common/Button";
 
-import { Cell } from "../../../enteties/matrix";
-import { useMatrix } from "../../providers/MatrixProvider";
-import { LocalStorageKeys, getLocalStorageItem } from "../../utils/storage";
+import { Cell } from "@/enteties/matrix";
+import { useMatrix } from "@app/providers/MatrixProvider";
+import { LocalStorageKeys, getLocalStorageItem } from "@utils/storage";
 
 import './index.scss'
 

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Input } from "../../components/common/Input";
-import { Button } from "../../components/common/Button";
+import { Input } from "@components/common/Input";
+import { Button } from "@components/common/Button";
 
-import { LocalStorageKeys, getLocalStorageItem, setLocalStorageItem } from "../../utils/storage";
-import { NotificationsPlugin } from "../../utils/notifications";
+import { LocalStorageKeys, getLocalStorageItem, setLocalStorageItem } from "@utils/storage";
+import { NotificationsPlugin } from "@utils/notifications";
 
 import './index.scss'
 

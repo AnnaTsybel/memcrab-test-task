@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { Cell, PercentageCell } from "../../enteties/matrix";
+import { Cell, PercentageCell } from "@/enteties/matrix";
 
 const MATRIX_CELL_MIN_RANGE = 100;
 const MATRIX_CELL_MAX_RANGE = 999;

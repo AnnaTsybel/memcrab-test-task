@@ -1,6 +1,6 @@
 import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from "react";
 
-import { Cell, PercentageCell } from "../../enteties/matrix";
+import { Cell, PercentageCell } from "@/enteties/matrix";
 import {
     calculateMedianOfCol,
     calculateSumOfRows,
@@ -10,8 +10,8 @@ import {
     detectNearestCellsId,
     addMatrixRow,
     increaseCellCount
-} from "../utils/matrix";
-import { LocalStorageKeys, setLocalStorageItem } from "../utils/storage";
+} from "@utils/matrix";
+import { LocalStorageKeys, setLocalStorageItem } from "@utils/storage";
 
 export interface StateInterface {
     rowsAmount: number;

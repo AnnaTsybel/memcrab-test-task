@@ -1,6 +1,6 @@
 import { ToastContainer } from 'react-toastify';
 
-import { NOTFICATION_DELAY, PositionsOnPage } from '../../../utils/notifications';
+import { NOTFICATION_DELAY, PositionsOnPage } from '@utils/notifications';
 
 import './index.scss';
 
